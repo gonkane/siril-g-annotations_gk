@@ -3,21 +3,16 @@
 This is a customized version of a Python script that adds galaxy annotations to astronomical images in Siril.  
 It is based on the original script created by Steffen Schreiber and Patrick Wagner.
 
-This version includes multiple enhancements such as built-in catalog support and GUI improvements.
+About this customized version (v1.0.2-gk.1):
 
 ---
 
 ## Features
 
-- Supports Siril's built-in catalogs (Messier, NGC, IC)
-- Queries additional galaxies from Simbad (LEDA, UGC, etc.)
-- Scrollable catalog list with per-catalog color selection
-- Output includes:
-  - Annotated overlay image with galaxy names
-  - Thumbnail table of detected galaxies
-  - Final combined image (overlay + table stacked vertically)
-- GUI operation with Tkinter
-- Executable from Siril's Python script launcher
+- Addressed an issue where some Messier, NGC, and IC objects were not annotated correctly,
+  by switching to Siril’s built-in catalog data
+- Added the ability to assign custom colors per catalog
+- Made the catalog list scrollable vertically in the GUI
 
 ---
 
