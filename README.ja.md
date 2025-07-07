@@ -39,11 +39,11 @@
 
 ### 出力例 1
 
-![Example Output 1](images/sample1.png)
+![Example Output 1](images/sample1.jpg)
 
 ### 出力例 2
 
-![Example Output 2](images/sample2.png)
+![Example Output 2](images/sample2.jpg)
 
 ---
 

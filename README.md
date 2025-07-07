@@ -39,11 +39,11 @@ This version includes multiple enhancements such as built-in catalog support and
 
 ### Example Output 1
 
-![Example Output 1](images/sample1.png)
+![Example Output 1](images/sample1.jpg)
 
 ### Example Output 2
 
-![Example Output 2](images/sample2.png)
+![Example Output 2](images/sample2.jpg)
 
 ---
 
