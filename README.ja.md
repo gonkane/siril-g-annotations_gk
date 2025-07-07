@@ -1,7 +1,12 @@
 # Siril用 銀河アノテーションスクリプト（バージョン 1.0.2-gk.1、作成者 gonkane）
 
-このスクリプトは、Siril における天体画像に銀河をアノテーション表示する Python スクリプトのカスタム版です。  
-元のスクリプトは Steffen Schreiber 氏と Patrick Wagner 氏によって作成されたものをベースにしています。
+このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって開発された Python スクリプト「Galaxy_Annotations.py」バージョン 1.0.2 をもとに、gonkane が改良を加えたものです。
+
+元のプロジェクトは以下の GitLab で公開されています：
+https://gitlab.com/schreiberste/siril-scripts
+
+オリジナルのスクリプトは、Simbad データベースから銀河情報を取得し、Siril 上の天体画像にアノテーション（銀河名など）を重ねる、高機能で洗練されたツールです。
+Python と Siril の連携を活用したこの素晴らしいスクリプトを開発されたお二人に、深く感謝と敬意を表します。
 
 この改良版（バージョン 1.0.2-gk.1）では、以下の点に改良を加えています：
 

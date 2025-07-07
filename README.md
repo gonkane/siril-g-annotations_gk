@@ -1,9 +1,14 @@
 # Galaxy Annotation Script for Siril (Version 1.0.2-gk.1, by gonkane)
 
-This is a customized version of a Python script that adds galaxy annotations to astronomical images in Siril.  
-It is based on the original script created by Steffen Schreiber and Patrick Wagner.
+This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py",
+originally developed by Steffen Schreiber and Patrick Wagner for Siril v1.4.0-beta, based on version 1.0.2.
 
-About this customized version (v1.0.2-gk.1):
+The original project is available on GitLab:
+https://gitlab.com/schreiberste/siril-scripts
+
+The original script is a powerful and well-designed tool that retrieves galaxy data from the Simbad database
+and overlays annotations (such as galaxy names) on astronomical images in Siril.
+I sincerely appreciate the excellent work of the original authors and their contribution to the community.
 
 ---
 
