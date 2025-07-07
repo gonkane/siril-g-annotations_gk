@@ -31,6 +31,22 @@
 
 ---
 
+## スクリーンショット
+
+### GUI画面
+
+![Galaxy Annotation Script GUI](images/siril_gui.jpg)
+
+### 出力例 1
+
+![Example Output 1](images/sample1.png)
+
+### 出力例 2
+
+![Example Output 2](images/sample2.png)
+
+---
+
 ## Siril での使い方（準備から実行まで）
 
 ### 1. Siril のバージョン確認
@@ -99,6 +115,27 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 | `annotated_M101.png`         | 上記2枚を縦に結合した最終画像     |
 
 Siril の画面でどれを読み込むかを選ぶオプションも用意されています。
+
+---
+
+## 注意点
+
+Messier、NGC、IC のデータについては、Siril に内蔵されている以下の `.csv` ファイルを使用します：
+
+C:/Program Files/Siril/share/siril/catalogue
+
+yaml
+コピーする
+編集する
+
+この中に次のファイルが存在する必要があります：
+
+- `messier.csv`
+- `ngc.csv`
+- `ic.csv`
+
+スクリプト実行時にこれらのファイルが見つからずエラーが発生する場合は、  
+お使いのPC内で `messier.csv` を検索し、スクリプト内の該当パス（約162行目）を実際の場所に合わせて修正してください。
 
 ---
 
