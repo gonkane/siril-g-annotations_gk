@@ -1,7 +1,7 @@
 # Galaxy Annotation Script for Siril (Version 1.0.2-gk.1, by gonkane)
 
-This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py",
-originally developed by Steffen Schreiber and Patrick Wagner for Siril v1.4.0-beta, based on version 1.0.2.
+This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py" version 1.0.2,
+originally developed by Steffen Schreiber and Patrick Wagner for Siril v1.4.0-beta.
 
 The original project is available on GitLab:
 https://gitlab.com/schreiberste/siril-scripts
