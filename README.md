@@ -31,6 +31,22 @@ This version includes multiple enhancements such as built-in catalog support and
 
 ---
 
+## Screenshots
+
+### GUI view
+
+![Galaxy Annotation Script GUI](images/siril_gui.jpg)
+
+### Example Output 1
+
+![Example Output 1](images/sample1.png)
+
+### Example Output 2
+
+![Example Output 2](images/sample2.png)
+
+---
+
 ## How to Use with Siril
 
 ### 1. Check Siril Version
@@ -99,6 +115,25 @@ After processing, three image files will be created and saved in the same folder
 | `annotated_M101.png`         | Combined image (overlay + table)      |
 
 You can choose which one to load back into Siril after generation.
+
+---
+
+## Notes
+
+For the Messier, NGC, and IC catalogs, this script uses the built-in `.csv` files provided by Siril,  
+which are typically located at:
+
+C:/Program Files/Siril/share/siril/catalogue
+
+The following files must be available in that directory:
+
+- `messier.csv`
+- `ngc.csv`
+- `ic.csv`
+
+If the script cannot find these files and encounters an error during execution,  
+please search your system for `messier.csv` and update the script’s path accordingly.  
+This path is defined near line 162 of the script file (`Galaxy_Annotations_102gk1.py`).
 
 ---
 
