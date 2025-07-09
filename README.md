@@ -1,23 +1,25 @@
-# Galaxy Annotation Script for Siril (Version 1.0.2-gk.1, by gonkane)
+# Galaxy Annotation Script for Siril (Version 1.0.2-gk.2, by gonkane)
 
-This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py" version 1.0.2,
+This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py" version 1.0.2,  
 originally developed by Steffen Schreiber and Patrick Wagner for Siril v1.4.0-beta.
 
-The original project is available on GitLab:
+The original project is available on GitLab:  
 https://gitlab.com/schreiberste/siril-scripts
 
-The original script is a powerful and well-designed tool that retrieves galaxy data from the Simbad database
-and overlays annotations (such as galaxy names) on astronomical images in Siril.
+The original script is a powerful and well-designed tool that retrieves galaxy data from the Simbad database  
+and overlays annotations (such as galaxy names) on astronomical images in Siril.  
 I sincerely appreciate the excellent work of the original authors and their contribution to the community.
 
 ---
 
 ## Features
 
-- Addressed an issue where some Messier, NGC, and IC objects were not annotated correctly,
+- Addressed an issue where some Messier, NGC, and IC objects were not annotated correctly  
   by switching to Siril’s built-in catalog data
 - Added the ability to assign custom colors per catalog
 - Made the catalog list scrollable vertically in the GUI
+- Improved patch size estimation using WCS-based 4-direction evaluation (RA±, DEC±)
+- Added fallback behavior for objects without size data
 
 ---
 
@@ -58,7 +60,7 @@ You can check this from the "Help → About" menu in Siril.
 
 ### 2. Save the Script
 
-Save `Galaxy_Annotations_102gk1.py` in any convenient folder of your choice.  
+Save `Galaxy_Annotations_102gk2.py` in any convenient folder of your choice.  
 Example: `C:\Users\<YourName>\Documents\SirilScripts\`
 
 ---
@@ -87,7 +89,7 @@ Make sure your image has been plate-solved using Siril’s astrometry tool (e.g.
 ### 5. Run the Script
 
 1. In Siril, go to the menu: "Scripts → Python Scripts"  
-2. Select `Galaxy_Annotations_102gk1.py` and run it
+2. Select `Galaxy_Annotations_102gk2.py` and run it
 
 ---
 
@@ -108,11 +110,11 @@ Click the **"Apply"** button to start processing.
 
 After processing, three image files will be created and saved in the same folder as the input image:
 
-| File Name Example            | Description                            |
-|-----------------------------|----------------------------------------|
-| `annotated_M101_overlay.png` | Overlay image with galaxy annotations |
-| `annotated_M101_table.png`   | Thumbnail table of detected galaxies  |
-| `annotated_M101.png`         | Combined image (overlay + table)      |
+| File Name Example             | Description                             |
+|------------------------------|-----------------------------------------|
+| `annotated_M101_overlay.png` | Overlay image with galaxy annotations   |
+| `annotated_M101_table.png`   | Thumbnail table of detected galaxies    |
+| `annotated_M101.png`         | Combined image (overlay + table)        |
 
 You can choose which one to load back into Siril after generation.
 
@@ -125,6 +127,7 @@ which are typically located at:
 
 C:/Program Files/Siril/share/siril/catalogue
 
+
 The following files must be available in that directory:
 
 - `messier.csv`
@@ -133,7 +136,22 @@ The following files must be available in that directory:
 
 If the script cannot find these files and encounters an error during execution,  
 please search your system for `messier.csv` and update the script’s path accordingly.  
-This path is defined near line 162 of the script file (`Galaxy_Annotations_102gk1.py`).
+This path is defined near line 166 of the script file (`Galaxy_Annotations_102gk2.py`).
+
+---
+
+## Version History
+
+### Latest Version: [Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
+- Version: 1.0.2-gk.2
+- Improved patch size estimation using 4-direction WCS evaluation (RA±, DEC±)
+- Fallback behavior added for objects without size data
+- Recommended for all users
+
+### Older Version: [Galaxy_Annotations_102gk1.py](Galaxy_Annotations_102gk1.py)
+- Version: 1.0.2-gk.1
+- This version has been superseded by v1.0.2-gk.2
+- Retained only for reference and backward compatibility
 
 ---
 
@@ -146,3 +164,4 @@ This script is a customized version based on the following project:
 
 This script is licensed under the **GNU General Public License v3 or later**.  
 See the `LICENSE` file in this repository for full details.
+
