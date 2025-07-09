@@ -1,6 +1,13 @@
 # (c) Steffen Schreiber, Patrick Wagner 2025
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
+# NOTE:
+# This script version (1.0.2-gk.1) has been superseded by a newer version:
+# Galaxy_Annotations_102gk2.py (v1.0.2-gk.2)
+#
+# Please use the updated version unless you specifically need this one.
+# The new version includes improved patch size estimation and fallback logic.
+#
 # This script is a customized version of the original Galaxy Annotations script
 # created by Steffen Schreiber and Patrick Wagner.
 #
