@@ -1019,7 +1019,7 @@ class AnnotationsScriptInterface:
                 return
 
             self.siril.cmd("load", f"\"{filepath}\"")
-            self.siril.log(f"Switched to: {os.path.basename(filepath)}", color=s.LogColor.RED)
+            self.siril.log(f"Switched to: {os.path.basename(filepath)}", color=s.LogColor.GREEN)
 
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load image:\n{str(e)}")
