@@ -14,7 +14,7 @@
 # License: GPL v3 or later (see LICENSE file for details)
 
 """
-Galaxy Annotation Script for Siril (Custom Version 1.0.2-gk.1 by gonkane)
+Galaxy Annotation Script for Siril (Custom Version 1.0.2-gk.2.1 by gonkane)
 
 This is a respectful customization of the official Galaxy Annotations Script (v1.0.2),
 originally developed by Steffen Schreiber and Patrick Wagner.
