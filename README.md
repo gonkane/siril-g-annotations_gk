@@ -1,13 +1,21 @@
 # Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.2.2 作成者 gonkane）
 
-このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって開発された Python スクリプト「Galaxy_Annotations.py」バージョン 1.0.2 をもとに、gonkane が改良を加えたものです。
+このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
+「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
 
-元のプロジェクトは以下の GitLab で公開されています：
-https://gitlab.com/schreiberste/siril-scripts
+元スクリプトの正式な配布元（GitLab）はこちらです：
+<https://gitlab.com/schreiberste/siril-scripts>
 
-このスクリプトは、Simbad データベースから天体情報を取得し、  
-Siril 上の天体画像にアノテーション（天体名など）を重ねて表示する高機能なツールです。  
-元の作者の方々の優れた開発と公開に深く感謝いたします。
+元スクリプトは、Simbad 天体データベースから天体情報を取得し、
+Siril 上の天体画像にアノテーション（天体名など）を描画するとともに、
+認識した天体を個別にピックアップして表形式で表示するとても素晴らしいスクリプトです。
+このような有用なスクリプトを開発・公開してくださった Steffen Schreiber 氏および Patrick Wagner 氏に、心より感謝申し上げます。
+
+本スクリプトは、元スクリプトと同様に GNU General Public License v3（GPL v3） に基づいて公開されており、
+自由に利用・改変・再配布が可能です。
+ただし、再配布の際には同じライセンスを適用する必要があります。
+著作権は元作者である Steffen Schreiber 氏および Patrick Wagner 氏に帰属することにご注意ください。
+詳しくはリポジトリ内の `LICENSE` ファイルをご参照ください。
 
 ---
 
