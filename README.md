@@ -1,167 +1,171 @@
-# Galaxy Annotation Script for Siril (Version 1.0.2-gk.2, by gonkane)
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.2.2 作成者 gonkane）
 
-This script is a customized and enhanced version of the Python script "Galaxy_Annotations.py" version 1.0.2,  
-originally developed by Steffen Schreiber and Patrick Wagner for Siril v1.4.0-beta.
+このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって開発された Python スクリプト「Galaxy_Annotations.py」バージョン 1.0.2 をもとに、gonkane が改良を加えたものです。
 
-The original project is available on GitLab:  
+元のプロジェクトは以下の GitLab で公開されています：
 https://gitlab.com/schreiberste/siril-scripts
 
-The original script is a powerful and well-designed tool that retrieves galaxy data from the Simbad database  
-and overlays annotations (such as galaxy names) on astronomical images in Siril.  
-I sincerely appreciate the excellent work of the original authors and their contribution to the community.
+このスクリプトは、Simbad データベースから天体情報を取得し、  
+Siril 上の天体画像にアノテーション（天体名など）を重ねて表示する高機能なツールです。  
+元の作者の方々の優れた開発と公開に深く感謝いたします。
 
 ---
 
-## Features
+## 追加機能一覧
 
-- Addressed an issue where some Messier, NGC, and IC objects were not annotated correctly  
-  by switching to Siril’s built-in catalog data
-- Added the ability to assign custom colors per catalog
-- Made the catalog list scrollable vertically in the GUI
-- Improved patch size estimation using WCS-based 4-direction evaluation (RA±, DEC±)
-- Added fallback behavior for objects without size data
+- Messier、NGC、IC の一部天体が正しくアノテーションされない問題に対応（Siril 内蔵カタログに切り替え）
+- カタログごとに色を自由に設定可能
+- GUI 上のカタログ一覧を縦スクロール対応に改善
+- アノテーションサイズの計算を改良（RA±、DEC±の 4方向評価による WCS ベースの処理）
+- サイズ情報がない天体に対するフォールバック処理を追加
+- GUI にて、作成後の画像を切り替える C / O / T / N ボタン を追加
+　C：合成画像　O：オーバーレイ画像　T：天体サムネイル表画像　N：元画像（処理前の FITS）
 
 ---
 
-## Requirements
+## 対応環境
 
-- Siril version 1.4.0-beta2 or later
-- Python modules (automatically requested by Siril if missing):
-  - `sirilpy` (version 0.6.37 or later)
+- Siril バージョン 1.4.0-beta2 以上
+- Pythonモジュール（Sirilが自動でインストールまたは要求する）：
+  - sirilpy（バージョン 0.6.37 以上）
   - numpy, pandas, matplotlib, Pillow
   - astropy, astroquery, scikit-image, ttkthemes
 
 ---
 
-## Screenshots
+## スクリーンショット
 
-### GUI view
+### GUI画面
 
-![Galaxy Annotation Script GUI](images/siril_gui.jpg)
+![Galaxy Annotation Script GUI](images/102gk2_1/siril_gui_102gk2_1.jpg)
 
-### Example Output 1
+### 出力例 1
 
-![Example Output 1](images/sample1.jpg)
+![Example Output 1](images/102gk2_2/sample1_102gk2_2.jpg)
 
-### Example Output 2
+### 出力例 2
 
-![Example Output 2](images/sample2.jpg)
-
----
-
-## How to Use with Siril
-
-### 1. Check Siril Version
-
-This script requires Siril version 1.4.0-beta2 or later.  
-You can check this from the "Help → About" menu in Siril.
+![Example Output 2](images/102gk2_2/sample2_102gk2_2.jpg)
 
 ---
 
-### 2. Save the Script
+## Siril での使い方（準備から実行まで）
 
-Save `Galaxy_Annotations_102gk2.py` in any convenient folder of your choice.  
-Example: `C:\Users\<YourName>\Documents\SirilScripts\`
+### 1. Siril のバージョン確認
 
----
-
-### 3. Set Script Folder in Siril
-
-1. Launch Siril  
-2. Open the menu: "≡ → Preferences"  
-3. Go to the "Scripts" tab  
-4. Set the "Script directory" to the folder where you saved the script  
-5. Click "Apply" to save and close the preferences
-
-If you are unsure how to do this, you can also place the script in this default location:  
-`C:\Users\<YourName>\AppData\Local\siril-scripts\utility`  
-This folder usually contains the original `Galaxy_Annotations.py`.
+このスクリプトは Siril v1.4.0-beta2 以降で動作します。  
+Siril のメニュー「ヘルプ → バージョン情報」で確認してください。
 
 ---
 
-### 4. Open a Plate-Solved Image
+### 2. スクリプトを保存する
 
-This script requires images that contain RA/DEC (celestial coordinate) information.  
-Make sure your image has been plate-solved using Siril’s astrometry tool (e.g., ImageSolver).
-
----
-
-### 5. Run the Script
-
-1. In Siril, go to the menu: "Scripts → Python Scripts"  
-2. Select `Galaxy_Annotations_102gk2.py` and run it
+`Galaxy_Annotations_102gk1.py` を、任意の使いやすいフォルダに保存します。  
+例： `C:\Users\<あなたの名前>\Documents\SirilScripts\`
 
 ---
 
-### 6. Configure and Generate Annotations
+### 3. Siril にスクリプトの保存先を設定する
 
-Once the script starts, a settings window will appear.
+1. Siril を起動  
+2. メニューから「≡ → 環境 設定」を開く  
+3. 「スクリプト」タブを開く  
+4. 「スクリプト保存ディレクトリ」の欄に、上で保存したフォルダのパスを入力する  
+5. 「適用」を押して環境設定を閉じる  
 
-- **Title**: This will appear on the output image  
-  (Note: Japanese characters may be rendered as boxes)  
-- **Logo**: You can optionally add a PNG or JPEG image to the lower right of the thumbnail table  
-- **Catalogs**: Select which catalogs to display, and assign colors
-
-Click the **"Apply"** button to start processing.
-
----
-
-### 7. Output Files
-
-After processing, three image files will be created and saved in the same folder as the input image:
-
-| File Name Example             | Description                             |
-|------------------------------|-----------------------------------------|
-| `annotated_M101_overlay.png` | Overlay image with galaxy annotations   |
-| `annotated_M101_table.png`   | Thumbnail table of detected galaxies    |
-| `annotated_M101.png`         | Combined image (overlay + table)        |
-
-You can choose which one to load back into Siril after generation.
+もしこの設定の仕方がよく分からない場合は、通常であれば  
+`C:\Users\（ユーザー名）\AppData\Local\siril-scripts\utility`  
+の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk2_1.py` を置いておくだけでも問題ありません。
 
 ---
 
-## Notes
+### 4. 星の位置情報が付与された画像を開く
 
-For the Messier, NGC, and IC catalogs, this script uses the built-in `.csv` files provided by Siril,  
-which are typically located at:
+このスクリプトは赤経・赤緯（RA/DEC）情報をもとに銀河の位置を特定するため、  
+必ずSirilのアストロメトリーなどで星の位置情報が付与された画像を使用してください。
+
+---
+
+### 5. スクリプトを実行する
+
+1. Siril のメニューから「スクリプト → Python Scripts」を選択  
+2. `Galaxy_Annotations_102gk2_1.py` を選んで実行  
+
+---
+
+### 6. 設定してアノテーションを生成
+
+設定ウィンドウが表示されます：
+
+- Title：作成画像に表示される名前
+　日本語が入っているとその部分は四角になります。
+- Logo：指定したJPEGやPNG画像を天体一覧の右下に追加する
+- 表示したいカタログ：チェックを入れて選択、色もカスタマイズ可能
+
+すべて設定したら「Apply」ボタンをクリックしてください。
+
+---
+
+### 7. 出力ファイルについて
+
+画像処理が完了すると、次の3種類の画像が出力されます（元画像と同じフォルダに保存されます）：
+
+| ファイル名例                  | 内容                             |
+|------------------------------|----------------------------------|
+| `annotated_M101_overlay.png` | 天体アノテーション付きの画像     |
+| `annotated_M101_table.png`   | 検出された天体のサムネイル表     |
+| `annotated_M101.png`         | 上記2枚を縦に結合した最終画像     |
+
+Siril の画面でどれを読み込むかを選ぶオプションも用意されています。
+
+---
+
+## 注意点
+
+Messier、NGC、IC のデータについては、Siril に内蔵されている以下の `.csv` ファイルを使用します：
 
 C:/Program Files/Siril/share/siril/catalogue
 
 
-The following files must be available in that directory:
+この中に次のファイルが存在する必要があります：
 
 - `messier.csv`
 - `ngc.csv`
 - `ic.csv`
 
-If the script cannot find these files and encounters an error during execution,  
-please search your system for `messier.csv` and update the script’s path accordingly.  
-This path is defined near line 166 of the script file (`Galaxy_Annotations_102gk2.py`).
+スクリプト実行時にこれらのファイルが見つからずエラーが発生する場合は、  
+お使いのPC内で `messier.csv` を検索し、スクリプト内の該当パス（約166行目）を実際の場所に合わせて修正してください。
 
 ---
 
-## Version History
+## バージョン履歴
 
-### Latest Version: [Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
-- Version: 1.0.2-gk.2
-- Improved patch size estimation using 4-direction WCS evaluation (RA±, DEC±)
-- Fallback behavior added for objects without size data
-- Recommended for all users
+### 最新バージョン：[Galaxy_Annotations_102gk2_2.py](Galaxy_Annotations_102gk2_2.py)
+- バージョン: 1.0.2-gk.2.2
+- radec2pix() が inf や nan を返す場合に発生していた OverflowError を修正
+- ピクセル座標変換時に非有限値（NaN、Inf）を除外するチェックを追加
+- 以上の修正で Siril v1.4.0-beta3 に対応
 
-### Older Version: [Galaxy_Annotations_102gk1.py](Galaxy_Annotations_102gk1.py)
-- Version: 1.0.2-gk.1
-- This version has been superseded by v1.0.2-gk.2
-- Retained only for reference and backward compatibility
+### 最新バージョン：[Galaxy_Annotations_102gk2_1.py](Galaxy_Annotations_102gk2_1.py)
+- バージョン: 1.0.2-gk.2.1
+- C/O/T/N ボタンによる画像切替機能を GUI に追加
+- 現在はこちらの使用を推奨します
+
+### 旧バージョン：[Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
+- バージョン: 1.0.2-gk.2  
+- RA±・DEC± の 4方向評価に基づくアノテーションサイズの計算を改良
+
+### 旧バージョン：[Galaxy_Annotations_102gk1.py](Galaxy_Annotations_102gk1.py)
+- 最初に公開したバージョンです
 
 ---
 
-## Credits and License
+## 著作権とライセンス
 
-This script is a customized version based on the following project:
+このスクリプトは、以下のプロジェクトをベースにした改良版です：
 
-- Original authors: Steffen Schreiber and Patrick Wagner  
-- Original repository: <https://gitlab.com/schreiberste/siril-scripts>
+- オリジナル作者: Steffen Schreiber 氏、Patrick Wagner 氏  
+- 元スクリプト：<https://gitlab.com/schreiberste/siril-scripts>
 
-This script is licensed under the **GNU General Public License v3 or later**.  
-See the `LICENSE` file in this repository for full details.
-
+ライセンスは GNU General Public License v3 またはそれ以降です。  
+詳しくはリポジトリ内の `LICENSE` ファイルをご参照ください。
