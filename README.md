@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.2.2 作成者 gonkane）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.3 作成者 gonkane）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -28,6 +28,9 @@ Siril 上の天体画像にアノテーション（天体名など）を描画�
 - アノテーションサイズの計算を改良（RA±、DEC±の 4方向評価による WCS ベースの処理）
 - GUI にて、作成後の画像を切り替える C / O / T / N ボタン を追加
 　C：合成画像　O：オーバーレイ画像　T：天体サムネイル表画像　N：元画像
+- 天体ごとに「表示・非表示」「色」を個別に設定可能
+- Apply / ReApply 実行時に元画像を自動で再読み込み
+- プレートソルブ未実行時には、起動直後に警告を表示して終了
 - Siril v1.4.0-beta3 に対応
 
 ---
@@ -157,6 +160,13 @@ C:/Program Files/Siril/share/siril/catalogue
 
 ## バージョン履歴
 
+### 最新バージョン：[Galaxy_Annotations_102gk3.py](Galaxy_Annotations_102gk3.py)
+
+- 天体ごとに色・表示のオンオフを個別に設定できる新GUIを追加
+- Apply / ReApply 実行時に元画像を自動でSirILに再読み込み
+- GUIの下部に「C / O / T / N」画像切替ボタンを統合（合成／オーバーレイ／サムネイル表／元画像）
+- プレートソルブが未実行の場合、起動直後に警告を表示してスクリプトを終了
+
 ### 最新バージョン：[Galaxy_Annotations_102gk2_2.py](Galaxy_Annotations_102gk2_2.py)
 - バージョン: 1.0.2-gk.2.2
 - radec2pix() が inf や nan を返す場合に発生していた OverflowError を修正
@@ -166,7 +176,6 @@ C:/Program Files/Siril/share/siril/catalogue
 ### 最新バージョン：[Galaxy_Annotations_102gk2_1.py](Galaxy_Annotations_102gk2_1.py)
 - バージョン: 1.0.2-gk.2.1
 - C/O/T/N ボタンによる画像切替機能を GUI に追加
-- 現在はこちらの使用を推奨します
 
 ### 旧バージョン：[Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
 - バージョン: 1.0.2-gk.2  
