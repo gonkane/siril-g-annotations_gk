@@ -59,7 +59,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 ### 2. スクリプトを保存する
 
-`Galaxy_Annotations_102gk1.py` を、任意の使いやすいフォルダに保存します。  
+`Galaxy_Annotations_102gk2_2.py` を、任意の使いやすいフォルダに保存します。  
 例： `C:\Users\<あなたの名前>\Documents\SirilScripts\`
 
 ---
@@ -74,7 +74,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 もしこの設定の仕方がよく分からない場合は、通常であれば  
 `C:\Users\（ユーザー名）\AppData\Local\siril-scripts\utility`  
-の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk2_1.py` を置いておくだけでも問題ありません。
+の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk2_2.py` を置いておくだけでも問題ありません。
 
 ---
 
@@ -88,7 +88,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 ### 5. スクリプトを実行する
 
 1. Siril のメニューから「スクリプト → Python Scripts」を選択  
-2. `Galaxy_Annotations_102gk2_1.py` を選んで実行  
+2. `Galaxy_Annotations_102gk2_2.py` を選んで実行  
 
 ---
 
@@ -96,7 +96,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 設定ウィンドウが表示されます：
 
-- Title：作成画像に表示される名前
+- Title：作成画像の表示されるタイトル名
 　日本語が入っているとその部分は四角になります。
 - Logo：指定したJPEGやPNG画像を天体一覧の右下に追加する
 - 表示したいカタログ：チェックを入れて選択、色もカスタマイズ可能
