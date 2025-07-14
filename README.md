@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.3 作成者 gonkane）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.3.1 作成者 gonkane）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -79,7 +79,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 ### 2. スクリプトを保存する
 
-`Galaxy_Annotations_102gk2_2.py` を、任意の使いやすいフォルダに保存します。  
+`Galaxy_Annotations_102gk3_1.py` を、任意の使いやすいフォルダに保存します。  
 例： `C:\Users\<あなたの名前>\Documents\SirilScripts\`
 
 ---
@@ -94,7 +94,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 もしこの設定の仕方がよく分からない場合は、通常であれば  
 `C:\Users\（ユーザー名）\AppData\Local\siril-scripts\utility`  
-の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk2_2.py` を置いておくだけでも問題ありません。
+の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk3_1.py` を置いておくだけでも問題ありません。
 
 ---
 
