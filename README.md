@@ -164,6 +164,7 @@ C:/Program Files/Siril/share/siril/catalogue
 - Apply / ReApply 実行時に元画像を自動でSirILに再読み込み
 - GUIの下部に「C / O / T / N」画像切替ボタンを統合（合成／オーバーレイ／サムネイル表／元画像）
 - プレートソルブが未実行の場合、起動直後に警告を表示してスクリプトを終了
+  上記はスクリプト実行時に開いている画像を元画像と認識しているために必要になりました
 
 ### 最新バージョン：[Galaxy_Annotations_102gk2_2.py](Galaxy_Annotations_102gk2_2.py)
 - バージョン: 1.0.2-gk.2.2
