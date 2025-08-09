@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.3.1 作成者 gonkane）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.4 作成者 gonkane）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -32,6 +32,11 @@ Siril 上の天体画像にアノテーション（天体名など）を描画�
 - 画像作成後の画像を切り替える C / O / T / N ボタン を追加
 　C：アノテーションの画像＋天体サムネイル表　O：アノテーション画像　T：天体サムネイル表　N：元画像
 - Siril v1.4.0-beta3 に対応
+- Siril 内蔵カタログ Star を追加
+- 天体名の表記が変更可能に
+- タイトル、天体名の日本語表記に対応
+- 天体データをcsvファイルに保存、編集、読み込みが可能に
+- csvファイルによるアノテーションの丸の位置、半径他の変更が可能に
 
 ---
 
@@ -48,7 +53,7 @@ Siril 上の天体画像にアノテーション（天体名など）を描画�
 
 ---
 
-## スクリーンショット
+## スクリーンショット（ まだ 1.0.2-gk.3.1の旧バージョンのままです ）
 
 ### GUI画面
 
@@ -68,6 +73,7 @@ Siril 上の天体画像にアノテーション（天体名など）を描画�
 
 詳しいダウンロード＆インストールの仕方が以下のnote記事を参照してください。
 <https://note.com/gonkane_create/n/n158f1d14b81e>
+(　サイトはまだ 1.0.2-gk.2 の旧バージョンのままです　）
 
 ## Siril での使い方（準備から実行まで簡易的なメモ）
 
@@ -80,7 +86,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 ### 2. スクリプトを保存する
 
-`Galaxy_Annotations_102gk3_1.py` を、任意の使いやすいフォルダに保存します。  
+`Galaxy_Annotations_102gk4.py` を、任意の使いやすいフォルダに保存します。  
 例： `C:\Users\<あなたの名前>\Documents\SirilScripts\`
 
 ---
@@ -95,7 +101,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 
 もしこの設定の仕方がよく分からない場合は、通常であれば  
 `C:\Users\（ユーザー名）\AppData\Local\siril-scripts\utility`  
-の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk3_1.py` を置いておくだけでも問題ありません。
+の中に元の `Galaxy_Annotations.py` があるので、そこに `Galaxy_Annotations_102gk4.py` を置いておくだけでも問題ありません。
 
 ---
 
@@ -109,7 +115,7 @@ Siril のメニュー「ヘルプ → バージョン情報」で確認してく
 ### 5. スクリプトを実行する
 
 1. Siril のメニューから「スクリプト → Python Scripts」を選択  
-2. `Galaxy_Annotations_102gk2_2.py` を選んで実行  
+2. `Galaxy_Annotations_102gk4.py` を選んで実行  
 
 ---
 
@@ -152,19 +158,28 @@ C:/Program Files/Siril/share/siril/catalogue
 - `messier.csv`
 - `ngc.csv`
 - `ic.csv`
+- `stars.csv`
 
 スクリプト実行時にこれらのファイルが見つからずエラーが発生する場合は、  
-お使いのPC内で `messier.csv` を検索し、スクリプト内の該当パス（約154行目）を実際の場所に合わせて修正してください。
+お使いのPC内で `messier.csv` を検索し、スクリプト内の該当パス（約213行目）を実際の場所に合わせて修正してください。
 
 ---
 
 ## バージョン履歴
 
-### 最新バージョン：[Galaxy_Annotations_102gk3_1.py](Galaxy_Annotations_102gk3_1.py)
+### 最新バージョン：[Galaxy_Annotations_102gk4.py](Galaxy_Annotations_102gk4.py)
+
+- Siril 内蔵カタログ Star を追加
+- 天体名の表記が変更可能に
+- タイトル、天体名の日本語表記に対応
+- 天体データをcsvファイルに保存、編集、読み込みが可能に
+- csvファイルによるアノテーションの丸の位置、半径他の変更が可能に
+
+### [Galaxy_Annotations_102gk3_1.py](Galaxy_Annotations_102gk3_1.py)
 
 - 中心座標が同じ天体について、アノテーション（円/枠）が外側にずれるよう改良
 
-### 旧バージョン：[Galaxy_Annotations_102gk3.py](Galaxy_Annotations_102gk3.py)
+### [Galaxy_Annotations_102gk3.py](Galaxy_Annotations_102gk3.py)
 
 - 天体ごとに色・表示のオンオフを個別に設定できる新GUIを追加
 - Apply / ReApply 実行時に元画像を自動でSirILに再読み込み
@@ -172,21 +187,21 @@ C:/Program Files/Siril/share/siril/catalogue
 - プレートソルブが未実行の場合、起動直後に警告を表示してスクリプトを終了
   上記はスクリプト実行時に開いている画像を元画像と認識しているために必要になりました
 
-### 旧バージョン：[Galaxy_Annotations_102gk2_2.py](Galaxy_Annotations_102gk2_2.py)
+### [Galaxy_Annotations_102gk2_2.py](Galaxy_Annotations_102gk2_2.py)
 - バージョン: 1.0.2-gk.2.2
 - radec2pix() が inf や nan を返す場合に発生していた OverflowError を修正
 - ピクセル座標変換時に非有限値（NaN、Inf）を除外するチェックを追加
 - 以上の修正で Siril v1.4.0-beta3 に対応
 
-### 旧バージョン：[Galaxy_Annotations_102gk2_1.py](Galaxy_Annotations_102gk2_1.py)
+### [Galaxy_Annotations_102gk2_1.py](Galaxy_Annotations_102gk2_1.py)
 - バージョン: 1.0.2-gk.2.1
 - C/O/T/N ボタンによる画像切替機能を GUI に追加
 
-### 旧バージョン：[Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
+### [Galaxy_Annotations_102gk2.py](Galaxy_Annotations_102gk2.py)
 - バージョン: 1.0.2-gk.2  
 - RA±・DEC± の 4方向評価に基づくアノテーションサイズの計算を改良
 
-### 旧バージョン：[Galaxy_Annotations_102gk1.py](Galaxy_Annotations_102gk1.py)
+### [Galaxy_Annotations_102gk1.py](Galaxy_Annotations_102gk1.py)
 - 最初に公開したバージョンです
 
 ---
