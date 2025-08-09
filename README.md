@@ -41,7 +41,7 @@ Siril 上の天体画像にアノテーション（天体名など）を描画�
 - 画像作成後の画像を切り替える C / O / T / N ボタン を追加
 　C：アノテーションの画像＋天体サムネイル表　O：アノテーション画像　T：天体サムネイル表　N：元画像
 - Siril v1.4.0-beta3 に対応
-- Siril 内蔵カタログ Star を追加
+- Siril 内蔵カタログ Stars を追加
 - 天体名の表記が変更可能に
 - タイトル、天体名の日本語表記に対応
 - 天体データをcsvファイルに保存、編集、読み込みが可能に
@@ -178,7 +178,7 @@ C:/Program Files/Siril/share/siril/catalogue
 
 ### 最新バージョン：[Galaxy_Annotations_102gk4.py](Galaxy_Annotations_102gk4.py)
 
-- Siril 内蔵カタログ Star を追加
+- Siril 内蔵カタログ Stars を追加
 - 天体名の表記が変更可能に
 - タイトル、天体名の日本語表記に対応
 - 天体データをcsvファイルに保存、編集、読み込みが可能に
