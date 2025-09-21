@@ -264,7 +264,7 @@ GA_AUTO_WRITE_APPLY_CACHE = False
 from pathlib import Path
 from matplotlib.lines import Line2D
 
-VERSION = "1.0.2-gk.13a-...-storder+csv4-prep1-prep"
+VERSION = "1.0.2-gk.5"
 
 
 # === PREP TODO ============================================================
