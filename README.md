@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5 作成者 gonkane）
+# Siril用 Galaxy Annotationsスクリプト（ バージョン 1.0.2-gk.5.1 ）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -17,6 +17,12 @@
 元のスクリプトは、Simbad の「Galaxy」の銀河のみのアノテーションでしたが
 本カスタム版は、Simbad の「Galaxy」の銀河＋Siril内蔵の「Stars、Messier、NGC、IC」のカタログ天体のアノテーションになっています。
 
+## gk.5.1 の新機能・変更点
+
+- カタログごとにフォントサイズの指定が可能に
+- Objectウィンドウでは各天体ごとにフォントサイズの指定が可能に
+- Export CSV / Replace CSV でもフォントサイズを保存、読み込み可能に
+- 
 ## gk.5 の新機能・変更点
 
 - 楕円の長径、短径、回転角も編集可能に。
@@ -24,12 +30,6 @@
 - Objectウィンドウで文字検索フィルターを追加。天体名と表示名から文字を検索・フィルター可能に。
 - Export CSV の列名を日本語化。Name と TYPE を含む。表示名の列は末尾へ移動
 - Replace CSV は長径、短径、回転角度も含めて内容をそのまま反映（並べ替えなし）
-
-## gk.5.1 の新機能・変更点
-
-- カタログごとにフォントサイズの指定が可能に
-- Objectウィンドウでは各天体ごとにフォントサイズの指定が可能に
-- Export CSV / Replace CSV でもフォントサイズを保存、読み込み可能に
 
 参考: 詳細は Galaxy_Annotations_102gk5.py 内の「gk.5 での主な更新」コメントを参照してください。
 
