@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.2 ）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.3 ）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
