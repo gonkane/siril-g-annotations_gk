@@ -8,13 +8,13 @@
 # https://gitlab.com/schreiberste/siril-scripts
 # Based on official version: v1.0.2
 #
-# Customized by: gonkane, 2025 — version 1.0.2-gk.5.2
+# Customized by: gonkane, 2025 — version 1.0.2-gk.5.3
 # See version history below for details.
 #
 # License: GPL v3 or later (see LICENSE file for details)
 
 """
-Siril 用銀河アノテーションスクリプト（カスタム版 1.0.2-gk.5.2 by gonkane）
+Siril 用銀河アノテーションスクリプト（カスタム版 1.0.2-gk.5.3 by gonkane）
 
 このスクリプトは、Steffen Schreiber 氏と Patrick Wagner 氏による
 Galaxy Annotations Script (v1.0.2) を拡張・調整したものです。
