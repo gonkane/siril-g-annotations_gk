@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.3.1 ）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.3.2 ）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -40,9 +40,13 @@
 - 詳細設定に「座標/フォント」タブを追加
 - タイトル、座標軸ラベル、目盛の色、フォントサイズがそれぞれ指定可能に。
 
-## gk.5.3.1 の不具合修正
+## gk.5.3.1 不具合修正
 
 - 詳細設定の「天体標本設定」の「それぞれ指定する」が機能していなかった問題を修正。
+
+## gk.5.3.2 の不具合修正
+
+- ReApplyボタンを押した際、Objectウィンドウの長径短径回転角のデータが消える不具合を修正。
 
 ---
 
@@ -205,7 +209,11 @@ Siril の画面から C/O/T/N ボタンで表示を切り替えられます。
 ---
 
 ## バージョン履歴
-最新: Galaxy_Annotations_102gk5_3_1.py
+
+最新: Galaxy_Annotations_102gk5_3_2.py
+- ReApplyボタンを押した際、Objectウィンドウの長径短径回転角のデータが消える不具合を修正。
+
+Galaxy_Annotations_102gk5_3_1.py
 - 詳細設定の「天体標本設定」の「それぞれ指定する」が機能していなかった問題を修正。
 
 Galaxy_Annotations_102gk5_3.py
