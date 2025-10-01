@@ -1,4 +1,4 @@
-# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.3.2 ）
+# Siril用 Galaxy Annotationsスクリプト（バージョン 1.0.2-gk.5.4 ）
 
 このスクリプトは、Siril v1.4.0-beta 用に Steffen Schreiber 氏および Patrick Wagner 氏によって作成された
 「Galaxy_Annotations.py」バージョン 1.0.2 をベースに、gonkane が非公式に個人的に改良を加えたものです。
@@ -48,6 +48,10 @@
 
 - ReApplyボタンを押した際、Objectウィンドウの長径短径回転角のデータが消える不具合を修正。
 
+## gk.5.4 不具合修正
+
+- 描画の際の長径に対する下限を0に変更し、小さい天体に対してもより正確な描画を可能に。
+
 ---
 
 ## 対応環境
@@ -79,7 +83,7 @@
 2. スクリプトを保存。Galaxy_Annotations_102gk5.py を任意のフォルダへ保存
 3. Siril でスクリプト保存先を設定。環境設定 → スクリプト → スクリプト保存ディレクトリに 2 のフォルダを指定
 4. Plate Solve と画像の準備。RA/DEC 情報付きのプレートソルブ済み画像。ストレッチ後の画像を推奨
-5. 実行。スクリプト → Python Scripts から Galaxy_Annotations_102gk5.py を実行
+5. 実行。スクリプト → Python Scripts から Galaxy_Annotations_102gk5_4.py を実行
 6. 設定と生成。Title、Logo、カタログ選択、Apply、必要に応じて Object ウィンドウで ReApply、標本作成、結合を実行
 7. 出力ファイル。処理後、元画像と同じフォルダに以下を保存
 
@@ -210,7 +214,10 @@ Siril の画面から C/O/T/N ボタンで表示を切り替えられます。
 
 ## バージョン履歴
 
-最新: Galaxy_Annotations_102gk5_3_2.py
+最新: Galaxy_Annotations_102gk5_4.py
+- 描画の際の長径に対する下限を0に変更し、小さい天体に対してもより正確な描画を可能に。
+
+Galaxy_Annotations_102gk5_3_2.py
 - ReApplyボタンを押した際、Objectウィンドウの長径短径回転角のデータが消える不具合を修正。
 
 Galaxy_Annotations_102gk5_3_1.py
